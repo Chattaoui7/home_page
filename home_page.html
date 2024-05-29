@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubRobotics</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    <header>
+      <a href="#" class="brand">CESE</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="home_page.html">Home</a>
+          <a href="AboutUs.html">Projects</a>
+          <a href="#">ContactUs</a>
+          <a href="singup.html">Login</a>
+        </div>
+      </div>
+    </header>
+    <section class="home">
+      <video class="video-slide active" src="videos/human&robtic.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="videos/medcine.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="videos/health.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="videos/istockphoto-1648869084-640_adpp_is.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="videos/istockphoto-1385739897-640_adpp_is.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Human&Robotics:<br><span>Working in the Future</span></h1>
+        <p>Robotics is rapidly expanding into the human environment and vigorously engaged in its new emerging challenges. Interacting, exploring, and working with humans, the new generation of robots will increasingly touch people and their lives. The successful introduction of robots in human environments will rely on the development of competent and practical systems that are dependable, safe, and easy to use.</p>
+        <a href="https://ieeexplore.ieee.org/document/5214433">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Robotics Programming<br><span>Environments</span></h1>
+        <p>Robotic systems are increasingly being utilized as fundamental data-gathering tools by scientists, allowing new perspectives and a greater understanding of the planet and its environmental processes. Today's robots are already exploring our deep oceans, tracking harmful algal blooms and pollution spread, monitoring climate variables, and even studying remote volcanoes. This article collates and discusses the significant advancements and applications of marine, terrestrial, and airborne robotic systems developed for environmental monitoring during the last two decades.</p>
+        <a href="https://ieeexplore.ieee.org/abstract/document/6161683">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Robots in<br><span>medicine</span></h1>
+        <p>Robots are poised to revolutionize the practice of medicine. Artificial intelligence, miniaturization, and computer power are contributing to the rise in design and use of robots in medicine.</p>
+        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6625162/">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Robotics in<br><span> Industry</span></h1>
+        <p>Although the introduction of robots into manufacturing technology is a relatively recent phenomenon, there are indications that a rapid increase in the numbers of robots employed in industry is already taking place. Robots may be found in a wide variety of settings, performing a wide range of functions. These functions may be characterised in terms of whether the robot manipulates a tool or handles a workpiece. The human tasks associated with all robot installations are programming and maintenance. Other tasks vary depending on the particular robot application but are likely to fall into one of four categories. The use of robots has implications for safety and it is apparent that greater emphasis than hitherto must be laid on the design and implementation of procedures to ensure safety.</p>
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0003687084901212">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Robotics and <br><span>inclusion</span></h1>
+        <p>Intelligent walkers for people with reduced mobility, robotic repositioning cameras, machines capable of dressing people, hair washers, feeders, robots that transfer people, for example, from a wheelchair to a bed, and many more assistive robots improve the lives not only of people with disabilities, but also of their ....</p>
+        <a href="https://www.researchgate.net/publication/352799015_Robotics_and_inclusion_of_students_with_disabilities_in_special_education">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href="https://youtu.be/5V1KGGYKD4w?si=BxCFCMZSQgxNizCu"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/abd_ali_chattaoui_?igsh=MWZreDV0ZnVzemF6YQ%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+        <a href="http://linkedin.com/in/abd-ali-chattaoui-77b360299"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      const menubtn =document.querySelector(".menu-btn");
+      const navigation =document.querySelector("navigation");
+      menubtn.addEventListener("click",()=>{
+          menubtn.classList.toggle("active")
+          navigation.classList.toggle("active")
+      });
+      const btns=document.querySelectorAll(".nav-btn");
+      const slides=document.querySelectorAll(".video-slide");
+      const content=document.querySelectorAll(".content");
+
+      var sliderNav=function(manual){
+          btns.forEach((btns) => {
+              btns.classList.remove("active");
+          });
+          slides.forEach((slides)=>{
+              slides.classList.remove("active");
+          });
+          content.forEach((content)=>{
+              content.classList.remove("active");
+          });
+          btns[manual].classList.add("active");
+          slides[manual].classList.add("active");
+          content[manual].classList.add("active");
+      }
+      btns.forEach((btns,i)=>{
+          btns.addEventListener("click",()=>{
+              sliderNav(i);
+          });
+      });
+    </script>
+  </body>
+</html>
